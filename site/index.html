@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="发现并检查 GitHub 上热门的 Codex skills。">
+    <title>Codex Skill Radar</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Codex Skill Radar 首页">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>
+          <strong>Codex Skill Radar</strong>
+          <small>GitHub skill index</small>
+        </span>
+      </a>
+      <div class="topbar-meta">
+        <span id="updatedAt" class="updated">正在加载目录</span>
+        <a class="button secondary" href="https://github.com/wujiaze16-lgtm/codex-skill-radar" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="workspace-head" aria-labelledby="pageTitle">
+        <div>
+          <p class="eyebrow">PUBLIC CATALOG</p>
+          <h1 id="pageTitle">热门 Codex Skills</h1>
+        </div>
+        <label class="search-field">
+          <span class="sr-only">搜索 skills</span>
+          <input id="searchInput" type="search" placeholder="搜索能力、仓库或标签" autocomplete="off">
+          <kbd>/</kbd>
+        </label>
+      </section>
+
+      <section class="metrics" aria-label="目录统计">
+        <div><span>收录 Skills</span><strong id="skillCount">0</strong></div>
+        <div><span>GitHub 仓库</span><strong id="repoCount">0</strong></div>
+        <div><span>插件</span><strong id="pluginCount">0</strong></div>
+        <div><span>MCP 集成</span><strong id="mcpCount">0</strong></div>
+      </section>
+
+      <nav class="tabs" aria-label="类型筛选">
+        <button class="tab active" type="button" data-type="all">全部</button>
+        <button class="tab" type="button" data-type="skill">Skills</button>
+        <button class="tab" type="button" data-type="plugin">Plugins</button>
+        <button class="tab" type="button" data-type="mcp">MCP</button>
+      </nav>
+
+      <div class="catalog-layout">
+        <aside class="filters" aria-label="筛选条件">
+          <div class="filter-heading">
+            <h2>筛选</h2>
+            <div>
+              <button id="filterToggle" class="text-button filter-toggle" type="button" aria-expanded="false">展开</button>
+              <button id="clearFilters" class="text-button" type="button">重置</button>
+            </div>
+          </div>
+          <fieldset>
+            <legend>风险等级</legend>
+            <label><input type="checkbox" name="risk" value="low">低风险</label>
+            <label><input type="checkbox" name="risk" value="medium">中风险</label>
+            <label><input type="checkbox" name="risk" value="high">高风险</label>
+          </fieldset>
+          <fieldset>
+            <legend>分发条件</legend>
+            <label><input id="licensedOnly" type="checkbox">包含许可证</label>
+            <label><input id="recentOnly" type="checkbox">90 天内活跃</label>
+          </fieldset>
+        </aside>
+
+        <section class="results" aria-labelledby="resultsTitle">
+          <div class="results-toolbar">
+            <div>
+              <h2 id="resultsTitle">搜索结果</h2>
+              <span id="resultCount">0 项</span>
+            </div>
+            <label class="sort-control">
+              <span>排序</span>
+              <select id="sortSelect">
+                <option value="trending">综合热度</option>
+                <option value="momentum">近期增长</option>
+                <option value="stars">Stars</option>
+                <option value="updated">最近活跃</option>
+              </select>
+            </label>
+          </div>
+          <div id="statusMessage" class="status-message" role="status">正在读取目录...</div>
+          <div id="resultList" class="result-list" aria-live="polite"></div>
+        </section>
+      </div>
+    </main>
+
+    <dialog id="detailDialog" class="detail-dialog">
+      <div class="dialog-head">
+        <div id="dialogIdentity"></div>
+        <button id="closeDialog" class="close-button" type="button" aria-label="关闭详情">×</button>
+      </div>
+      <div id="dialogBody" class="dialog-body"></div>
+      <div class="dialog-actions">
+        <a id="sourceLink" class="button secondary" target="_blank" rel="noreferrer">查看源码</a>
+        <button id="copyInstall" class="button primary" type="button">复制安装指令</button>
+      </div>
+    </dialog>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="./app.js" defer></script>
+  </body>
+</html>

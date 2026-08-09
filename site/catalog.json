@@ -1,0 +1,808 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-08-09T04:45:41Z",
+  "stats": {
+    "repositories_discovered": 12,
+    "repositories_scanned": 5,
+    "skills_found": 13,
+    "github_requests": 25,
+    "partial_errors": 4
+  },
+  "source": {
+    "provider": "GitHub",
+    "queries": [
+      "\"codex skills\" in:name,description,readme fork:false archived:false",
+      "\"SKILL.md\" codex in:readme fork:false archived:false",
+      "topic:codex-skills fork:false archived:false",
+      "topic:codex-skill fork:false archived:false"
+    ]
+  },
+  "items": [
+    {
+      "id": "0a2ef73281ba8465",
+      "name": "brainstorming",
+      "description": "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation.",
+      "types": [
+        "skill",
+        "plugin"
+      ],
+      "repository": {
+        "full_name": "obra/superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "owner": "obra",
+        "owner_avatar": "https://avatars.githubusercontent.com/u/45416?v=4",
+        "stars": 269388,
+        "forks": 24070,
+        "language": "Shell",
+        "license": "MIT",
+        "topics": [
+          "ai",
+          "brainstorming",
+          "coding",
+          "obra",
+          "sdlc",
+          "skills",
+          "subagent-driven-development",
+          "superpowers"
+        ],
+        "default_branch": "main",
+        "pushed_at": "2026-08-08T01:45:49Z",
+        "archived": false
+      },
+      "skill_path": "skills/brainstorming/SKILL.md",
+      "source_url": "https://github.com/obra/superpowers/tree/main/skills/brainstorming",
+      "install": {
+        "mode": "plugin",
+        "repo": "obra/superpowers",
+        "ref": "main",
+        "path": "skills/brainstorming",
+        "plugin_path": "",
+        "codex_prompt": "Use $skill-radar to inspect and install obra/superpowers:skills/brainstorming/SKILL.md."
+      },
+      "risk": {
+        "level": "high",
+        "has_scripts": true,
+        "has_mcp": false,
+        "has_hooks": true,
+        "signals": [
+          "Contains executable scripts",
+          "Contains hooks"
+        ]
+      },
+      "score": {
+        "total": 70,
+        "popularity": 100,
+        "momentum": 0,
+        "freshness": 99,
+        "quality": 100,
+        "trust": 100,
+        "star_delta_7d": 0,
+        "star_delta_30d": 0
+      }
+    },
+    {
+      "id": "fcbf537888dd4a5d",
+      "name": "dispatching-parallel-agents",
+      "description": "Use when facing 2+ independent tasks that can be worked on without shared state or sequential dependencies",
+      "types": [
+        "skill",
+        "plugin"
+      ],
+      "repository": {
+        "full_name": "obra/superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "owner": "obra",
+        "owner_avatar": "https://avatars.githubusercontent.com/u/45416?v=4",
+        "stars": 269388,
+        "forks": 24070,
+        "language": "Shell",
+        "license": "MIT",
+        "topics": [
+          "ai",
+          "brainstorming",
+          "coding",
+          "obra",
+          "sdlc",
+          "skills",
+          "subagent-driven-development",
+          "superpowers"
+        ],
+        "default_branch": "main",
+        "pushed_at": "2026-08-08T01:45:49Z",
+        "archived": false
+      },
+      "skill_path": "skills/dispatching-parallel-agents/SKILL.md",
+      "source_url": "https://github.com/obra/superpowers/tree/main/skills/dispatching-parallel-agents",
+      "install": {
+        "mode": "plugin",
+        "repo": "obra/superpowers",
+        "ref": "main",
+        "path": "skills/dispatching-parallel-agents",
+        "plugin_path": "",
+        "codex_prompt": "Use $skill-radar to inspect and install obra/superpowers:skills/dispatching-parallel-agents/SKILL.md."
+      },
+      "risk": {
+        "level": "high",
+        "has_scripts": true,
+        "has_mcp": false,
+        "has_hooks": true,
+        "signals": [
+          "Contains executable scripts",
+          "Contains hooks"
+        ]
+      },
+      "score": {
+        "total": 70,
+        "popularity": 100,
+        "momentum": 0,
+        "freshness": 99,
+        "quality": 100,
+        "trust": 100,
+        "star_delta_7d": 0,
+        "star_delta_30d": 0
+      }
+    },
+    {
+      "id": "6bfca9b361d4f1b3",
+      "name": "executing-plans",
+      "description": "Use when you have a written implementation plan to execute in a separate session with review checkpoints",
+      "types": [
+        "skill",
+        "plugin"
+      ],
+      "repository": {
+        "full_name": "obra/superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "owner": "obra",
+        "owner_avatar": "https://avatars.githubusercontent.com/u/45416?v=4",
+        "stars": 269388,
+        "forks": 24070,
+        "language": "Shell",
+        "license": "MIT",
+        "topics": [
+          "ai",
+          "brainstorming",
+          "coding",
+          "obra",
+          "sdlc",
+          "skills",
+          "subagent-driven-development",
+          "superpowers"
+        ],
+        "default_branch": "main",
+        "pushed_at": "2026-08-08T01:45:49Z",
+        "archived": false
+      },
+      "skill_path": "skills/executing-plans/SKILL.md",
+      "source_url": "https://github.com/obra/superpowers/tree/main/skills/executing-plans",
+      "install": {
+        "mode": "plugin",
+        "repo": "obra/superpowers",
+        "ref": "main",
+        "path": "skills/executing-plans",
+        "plugin_path": "",
+        "codex_prompt": "Use $skill-radar to inspect and install obra/superpowers:skills/executing-plans/SKILL.md."
+      },
+      "risk": {
+        "level": "high",
+        "has_scripts": true,
+        "has_mcp": false,
+        "has_hooks": true,
+        "signals": [
+          "Contains executable scripts",
+          "Contains hooks"
+        ]
+      },
+      "score": {
+        "total": 70,
+        "popularity": 100,
+        "momentum": 0,
+        "freshness": 99,
+        "quality": 100,
+        "trust": 100,
+        "star_delta_7d": 0,
+        "star_delta_30d": 0
+      }
+    },
+    {
+      "id": "85433dfc79624aac",
+      "name": "agent-introspection-debugging",
+      "description": "Structured self-debugging workflow for AI agent failures using capture, diagnosis, contained recovery, and introspection reports.",
+      "types": [
+        "skill",
+        "plugin",
+        "mcp"
+      ],
+      "repository": {
+        "full_name": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "owner": "affaan-m",
+        "owner_avatar": "https://avatars.githubusercontent.com/u/124439313?v=4",
+        "stars": 238851,
+        "forks": 36274,
+        "language": "JavaScript",
+        "license": "MIT",
+        "topics": [
+          "ai-agents",
+          "anthropic",
+          "claude",
+          "claude-code",
+          "developer-tools",
+          "llm",
+          "mcp",
+          "productivity"
+        ],
+        "default_branch": "main",
+        "pushed_at": "2026-08-08T21:06:19Z",
+        "archived": false
+      },
+      "skill_path": ".agents/skills/agent-introspection-debugging/SKILL.md",
+      "source_url": "https://github.com/affaan-m/ECC/tree/main/.agents/skills/agent-introspection-debugging",
+      "install": {
+        "mode": "plugin",
+        "repo": "affaan-m/ECC",
+        "ref": "main",
+        "path": ".agents/skills/agent-introspection-debugging",
+        "plugin_path": "",
+        "codex_prompt": "Use $skill-radar to inspect and install affaan-m/ECC:.agents/skills/agent-introspection-debugging/SKILL.md."
+      },
+      "risk": {
+        "level": "high",
+        "has_scripts": true,
+        "has_mcp": true,
+        "has_hooks": true,
+        "signals": [
+          "Contains executable scripts",
+          "Configures MCP servers",
+          "Contains hooks"
+        ]
+      },
+      "score": {
+        "total": 70,
+        "popularity": 100,
+        "momentum": 0,
+        "freshness": 100,
+        "quality": 100,
+        "trust": 100,
+        "star_delta_7d": 0,
+        "star_delta_30d": 0
+      }
+    },
+    {
+      "id": "3f625cd96c89dcde",
+      "name": "agent-sort",
+      "description": "Build an evidence-backed ECC install plan for a specific repo by sorting skills, commands, rules, hooks, and extras into DAILY vs LIBRARY buckets using parallel repo-aware review passes. Use when ECC should be trimmed to what a project actually needs instead of loading the full bundle.",
+      "types": [
+        "skill",
+        "plugin",
+        "mcp"
+      ],
+      "repository": {
+        "full_name": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "owner": "affaan-m",
+        "owner_avatar": "https://avatars.githubusercontent.com/u/124439313?v=4",
+        "stars": 238851,
+        "forks": 36274,
+        "language": "JavaScript",
+        "license": "MIT",
+        "topics": [
+          "ai-agents",
+          "anthropic",
+          "claude",
+          "claude-code",
+          "developer-tools",
+          "llm",
+          "mcp",
+          "productivity"
+        ],
+        "default_branch": "main",
+        "pushed_at": "2026-08-08T21:06:19Z",
+        "archived": false
+      },
+      "skill_path": ".agents/skills/agent-sort/SKILL.md",
+      "source_url": "https://github.com/affaan-m/ECC/tree/main/.agents/skills/agent-sort",
+      "install": {
+        "mode": "plugin",
+        "repo": "affaan-m/ECC",
+        "ref": "main",
+        "path": ".agents/skills/agent-sort",
+        "plugin_path": "",
+        "codex_prompt": "Use $skill-radar to inspect and install affaan-m/ECC:.agents/skills/agent-sort/SKILL.md."
+      },
+      "risk": {
+        "level": "high",
+        "has_scripts": true,
+        "has_mcp": true,
+        "has_hooks": true,
+        "signals": [
+          "Contains executable scripts",
+          "Configures MCP servers",
+          "Contains hooks"
+        ]
+      },
+      "score": {
+        "total": 70,
+        "popularity": 100,
+        "momentum": 0,
+        "freshness": 100,
+        "quality": 100,
+        "trust": 100,
+        "star_delta_7d": 0,
+        "star_delta_30d": 0
+      }
+    },
+    {
+      "id": "55ba38f95fe82ce1",
+      "name": "api-design",
+      "description": "REST API design patterns including resource naming, status codes, pagination, filtering, error responses, versioning, and rate limiting for production APIs.",
+      "types": [
+        "skill",
+        "plugin",
+        "mcp"
+      ],
+      "repository": {
+        "full_name": "affaan-m/ECC",
+        "url": "https://github.com/affaan-m/ECC",
+        "owner": "affaan-m",
+        "owner_avatar": "https://avatars.githubusercontent.com/u/124439313?v=4",
+        "stars": 238851,
+        "forks": 36274,
+        "language": "JavaScript",
+        "license": "MIT",
+        "topics": [
+          "ai-agents",
+          "anthropic",
+          "claude",
+          "claude-code",
+          "developer-tools",
+          "llm",
+          "mcp",
+          "productivity"
+        ],
+        "default_branch": "main",
+        "pushed_at": "2026-08-08T21:06:19Z",
+        "archived": false
+      },
+      "skill_path": ".agents/skills/api-design/SKILL.md",
+      "source_url": "https://github.com/affaan-m/ECC/tree/main/.agents/skills/api-design",
+      "install": {
+        "mode": "plugin",
+        "repo": "affaan-m/ECC",
+        "ref": "main",
+        "path": ".agents/skills/api-design",
+        "plugin_path": "",
+        "codex_prompt": "Use $skill-radar to inspect and install affaan-m/ECC:.agents/skills/api-design/SKILL.md."
+      },
+      "risk": {
+        "level": "high",
+        "has_scripts": true,
+        "has_mcp": true,
+        "has_hooks": true,
+        "signals": [
+          "Contains executable scripts",
+          "Configures MCP servers",
+          "Contains hooks"
+        ]
+      },
+      "score": {
+        "total": 70,
+        "popularity": 100,
+        "momentum": 0,
+        "freshness": 100,
+        "quality": 100,
+        "trust": 100,
+        "star_delta_7d": 0,
+        "star_delta_30d": 0
+      }
+    },
+    {
+      "id": "3bfa2df1e2a2fc5a",
+      "name": "moneyprinterturbo-video",
+      "description": "Use this skill whenever the user wants to create a finished video from a topic, title, idea, prompt, or script with MoneyPrinterTurbo. This includes short-form, voice-over, educational, marketing, social-media, and stock-footage videos. Also use it when the user mentions MoneyPrinterTurbo, provides this Skill URL, asks an AI agent to install or configure Mon",
+      "types": [
+        "skill"
+      ],
+      "repository": {
+        "full_name": "harry0703/MoneyPrinterTurbo",
+        "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+        "owner": "harry0703",
+        "owner_avatar": "https://avatars.githubusercontent.com/u/4928832?v=4",
+        "stars": 102240,
+        "forks": 15410,
+        "language": "Python",
+        "license": "MIT",
+        "topics": [
+          "ai-video-generator",
+          "content-creation",
+          "ffmpeg",
+          "instagram-reels",
+          "llm",
+          "python",
+          "short-video",
+          "subtitles",
+          "text-to-speech",
+          "tiktok",
+          "video-automation",
+          "video-workflow",
+          "workflow-automation",
+          "youtube-shorts"
+        ],
+        "default_branch": "main",
+        "pushed_at": "2026-08-07T04:44:30Z",
+        "archived": false
+      },
+      "skill_path": "docs/skill/SKILL.md",
+      "source_url": "https://github.com/harry0703/MoneyPrinterTurbo/tree/main/docs/skill",
+      "install": {
+        "mode": "skill",
+        "repo": "harry0703/MoneyPrinterTurbo",
+        "ref": "main",
+        "path": "docs/skill",
+        "plugin_path": null,
+        "codex_prompt": "Use $skill-radar to inspect and install harry0703/MoneyPrinterTurbo:docs/skill/SKILL.md."
+      },
+      "risk": {
+        "level": "medium",
+        "has_scripts": true,
+        "has_mcp": false,
+        "has_hooks": false,
+        "signals": [
+          "Contains executable scripts"
+        ]
+      },
+      "score": {
+        "total": 70,
+        "popularity": 100,
+        "momentum": 0,
+        "freshness": 98,
+        "quality": 100,
+        "trust": 100,
+        "star_delta_7d": 0,
+        "star_delta_30d": 0
+      }
+    },
+    {
+      "id": "d9d222a50a3c94b5",
+      "name": "api-and-interface-design",
+      "description": "Guides stable API and interface design. Use when designing APIs, module boundaries, or any public interface. Use when creating REST or GraphQL endpoints, defining type contracts between modules, or establishing boundaries between frontend and backend.",
+      "types": [
+        "skill",
+        "plugin"
+      ],
+      "repository": {
+        "full_name": "addyosmani/agent-skills",
+        "url": "https://github.com/addyosmani/agent-skills",
+        "owner": "addyosmani",
+        "owner_avatar": "https://avatars.githubusercontent.com/u/110953?v=4",
+        "stars": 84669,
+        "forks": 9117,
+        "language": "JavaScript",
+        "license": "MIT",
+        "topics": [
+          "agent-skills",
+          "antigravity",
+          "claude-code",
+          "codex",
+          "cursor",
+          "skills"
+        ],
+        "default_branch": "main",
+        "pushed_at": "2026-08-08T21:05:57Z",
+        "archived": false
+      },
+      "skill_path": "skills/api-and-interface-design/SKILL.md",
+      "source_url": "https://github.com/addyosmani/agent-skills/tree/main/skills/api-and-interface-design",
+      "install": {
+        "mode": "plugin",
+        "repo": "addyosmani/agent-skills",
+        "ref": "main",
+        "path": "skills/api-and-interface-design",
+        "plugin_path": "",
+        "codex_prompt": "Use $skill-radar to inspect and install addyosmani/agent-skills:skills/api-and-interface-design/SKILL.md."
+      },
+      "risk": {
+        "level": "high",
+        "has_scripts": true,
+        "has_mcp": false,
+        "has_hooks": true,
+        "signals": [
+          "Contains executable scripts",
+          "Contains hooks"
+        ]
+      },
+      "score": {
+        "total": 70,
+        "popularity": 99,
+        "momentum": 0,
+        "freshness": 100,
+        "quality": 100,
+        "trust": 100,
+        "star_delta_7d": 0,
+        "star_delta_30d": 0
+      }
+    },
+    {
+      "id": "6e96ff1f89a8ef3b",
+      "name": "browser-testing-with-devtools",
+      "description": "Tests in real browsers via Chrome DevTools MCP. Use when building or debugging anything that runs in a browser. Use when you need to inspect the DOM, capture console errors, analyze network requests, profile performance, or verify visual output with real runtime data. Requires the chrome-devtools MCP server to be configured.",
+      "types": [
+        "skill",
+        "plugin"
+      ],
+      "repository": {
+        "full_name": "addyosmani/agent-skills",
+        "url": "https://github.com/addyosmani/agent-skills",
+        "owner": "addyosmani",
+        "owner_avatar": "https://avatars.githubusercontent.com/u/110953?v=4",
+        "stars": 84669,
+        "forks": 9117,
+        "language": "JavaScript",
+        "license": "MIT",
+        "topics": [
+          "agent-skills",
+          "antigravity",
+          "claude-code",
+          "codex",
+          "cursor",
+          "skills"
+        ],
+        "default_branch": "main",
+        "pushed_at": "2026-08-08T21:05:57Z",
+        "archived": false
+      },
+      "skill_path": "skills/browser-testing-with-devtools/SKILL.md",
+      "source_url": "https://github.com/addyosmani/agent-skills/tree/main/skills/browser-testing-with-devtools",
+      "install": {
+        "mode": "plugin",
+        "repo": "addyosmani/agent-skills",
+        "ref": "main",
+        "path": "skills/browser-testing-with-devtools",
+        "plugin_path": "",
+        "codex_prompt": "Use $skill-radar to inspect and install addyosmani/agent-skills:skills/browser-testing-with-devtools/SKILL.md."
+      },
+      "risk": {
+        "level": "high",
+        "has_scripts": true,
+        "has_mcp": false,
+        "has_hooks": true,
+        "signals": [
+          "Contains executable scripts",
+          "Contains hooks"
+        ]
+      },
+      "score": {
+        "total": 70,
+        "popularity": 99,
+        "momentum": 0,
+        "freshness": 100,
+        "quality": 100,
+        "trust": 100,
+        "star_delta_7d": 0,
+        "star_delta_30d": 0
+      }
+    },
+    {
+      "id": "9176c1c36bdff5b7",
+      "name": "ci-cd-and-automation",
+      "description": "Automates CI/CD pipeline setup. Use when setting up or modifying build and deployment pipelines. Use when you need to automate quality gates, configure test runners in CI, or establish deployment strategies.",
+      "types": [
+        "skill",
+        "plugin"
+      ],
+      "repository": {
+        "full_name": "addyosmani/agent-skills",
+        "url": "https://github.com/addyosmani/agent-skills",
+        "owner": "addyosmani",
+        "owner_avatar": "https://avatars.githubusercontent.com/u/110953?v=4",
+        "stars": 84669,
+        "forks": 9117,
+        "language": "JavaScript",
+        "license": "MIT",
+        "topics": [
+          "agent-skills",
+          "antigravity",
+          "claude-code",
+          "codex",
+          "cursor",
+          "skills"
+        ],
+        "default_branch": "main",
+        "pushed_at": "2026-08-08T21:05:57Z",
+        "archived": false
+      },
+      "skill_path": "skills/ci-cd-and-automation/SKILL.md",
+      "source_url": "https://github.com/addyosmani/agent-skills/tree/main/skills/ci-cd-and-automation",
+      "install": {
+        "mode": "plugin",
+        "repo": "addyosmani/agent-skills",
+        "ref": "main",
+        "path": "skills/ci-cd-and-automation",
+        "plugin_path": "",
+        "codex_prompt": "Use $skill-radar to inspect and install addyosmani/agent-skills:skills/ci-cd-and-automation/SKILL.md."
+      },
+      "risk": {
+        "level": "high",
+        "has_scripts": true,
+        "has_mcp": false,
+        "has_hooks": true,
+        "signals": [
+          "Contains executable scripts",
+          "Contains hooks"
+        ]
+      },
+      "score": {
+        "total": 70,
+        "popularity": 99,
+        "momentum": 0,
+        "freshness": 100,
+        "quality": 100,
+        "trust": 100,
+        "star_delta_7d": 0,
+        "star_delta_30d": 0
+      }
+    },
+    {
+      "id": "ead709c2f3f842b7",
+      "name": "autoplan",
+      "description": "Auto-review pipeline — reads the full CEO, design, eng, and DX review skills from disk and runs them sequentially with auto-decisions using 6 decision principles. (gstack)",
+      "types": [
+        "skill"
+      ],
+      "repository": {
+        "full_name": "garrytan/gstack",
+        "url": "https://github.com/garrytan/gstack",
+        "owner": "garrytan",
+        "owner_avatar": "https://avatars.githubusercontent.com/u/19957?v=4",
+        "stars": 127007,
+        "forks": 19122,
+        "language": "TypeScript",
+        "license": "MIT",
+        "topics": [],
+        "default_branch": "main",
+        "pushed_at": "2026-08-08T16:28:45Z",
+        "archived": false
+      },
+      "skill_path": "autoplan/SKILL.md",
+      "source_url": "https://github.com/garrytan/gstack/tree/main/autoplan",
+      "install": {
+        "mode": "skill",
+        "repo": "garrytan/gstack",
+        "ref": "main",
+        "path": "autoplan",
+        "plugin_path": null,
+        "codex_prompt": "Use $skill-radar to inspect and install garrytan/gstack:autoplan/SKILL.md."
+      },
+      "risk": {
+        "level": "high",
+        "has_scripts": true,
+        "has_mcp": false,
+        "has_hooks": true,
+        "signals": [
+          "Contains executable scripts",
+          "Contains hooks"
+        ]
+      },
+      "score": {
+        "total": 68,
+        "popularity": 100,
+        "momentum": 0,
+        "freshness": 100,
+        "quality": 85,
+        "trust": 100,
+        "star_delta_7d": 0,
+        "star_delta_30d": 0
+      }
+    },
+    {
+      "id": "fb8f5e19c762dd53",
+      "name": "benchmark-models",
+      "description": "Cross-model benchmark for gstack skills. (gstack)",
+      "types": [
+        "skill"
+      ],
+      "repository": {
+        "full_name": "garrytan/gstack",
+        "url": "https://github.com/garrytan/gstack",
+        "owner": "garrytan",
+        "owner_avatar": "https://avatars.githubusercontent.com/u/19957?v=4",
+        "stars": 127007,
+        "forks": 19122,
+        "language": "TypeScript",
+        "license": "MIT",
+        "topics": [],
+        "default_branch": "main",
+        "pushed_at": "2026-08-08T16:28:45Z",
+        "archived": false
+      },
+      "skill_path": "benchmark-models/SKILL.md",
+      "source_url": "https://github.com/garrytan/gstack/tree/main/benchmark-models",
+      "install": {
+        "mode": "skill",
+        "repo": "garrytan/gstack",
+        "ref": "main",
+        "path": "benchmark-models",
+        "plugin_path": null,
+        "codex_prompt": "Use $skill-radar to inspect and install garrytan/gstack:benchmark-models/SKILL.md."
+      },
+      "risk": {
+        "level": "high",
+        "has_scripts": true,
+        "has_mcp": false,
+        "has_hooks": true,
+        "signals": [
+          "Contains executable scripts",
+          "Contains hooks"
+        ]
+      },
+      "score": {
+        "total": 66,
+        "popularity": 100,
+        "momentum": 0,
+        "freshness": 100,
+        "quality": 70,
+        "trust": 100,
+        "star_delta_7d": 0,
+        "star_delta_30d": 0
+      }
+    },
+    {
+      "id": "97907790444150a2",
+      "name": "gstack",
+      "description": "Router for the gstack skill suite. (gstack)",
+      "types": [
+        "skill"
+      ],
+      "repository": {
+        "full_name": "garrytan/gstack",
+        "url": "https://github.com/garrytan/gstack",
+        "owner": "garrytan",
+        "owner_avatar": "https://avatars.githubusercontent.com/u/19957?v=4",
+        "stars": 127007,
+        "forks": 19122,
+        "language": "TypeScript",
+        "license": "MIT",
+        "topics": [],
+        "default_branch": "main",
+        "pushed_at": "2026-08-08T16:28:45Z",
+        "archived": false
+      },
+      "skill_path": "SKILL.md",
+      "source_url": "https://github.com/garrytan/gstack/tree/main/.",
+      "install": {
+        "mode": "skill",
+        "repo": "garrytan/gstack",
+        "ref": "main",
+        "path": ".",
+        "plugin_path": null,
+        "codex_prompt": "Use $skill-radar to inspect and install garrytan/gstack:SKILL.md."
+      },
+      "risk": {
+        "level": "high",
+        "has_scripts": true,
+        "has_mcp": false,
+        "has_hooks": true,
+        "signals": [
+          "Contains executable scripts",
+          "Contains hooks"
+        ]
+      },
+      "score": {
+        "total": 64,
+        "popularity": 100,
+        "momentum": 0,
+        "freshness": 100,
+        "quality": 60,
+        "trust": 100,
+        "star_delta_7d": 0,
+        "star_delta_30d": 0
+      }
+    }
+  ],
+  "warnings": [
+    "GitHub API 403 for https://api.github.com/repos/nexu-io/open-design/git/trees/main?recursive=1: {\"message\":\"API rate limit exceeded for 45.8.186.46. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)\",\"documentation_url\":\"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting\"}\n",
+    "GitHub API 403 for https://api.github.com/repos/bytedance/deer-flow/git/trees/main?recursive=1: {\"message\":\"API rate limit exceeded for 45.8.186.46. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)\",\"documentation_url\":\"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting\"}\n",
+    "GitHub API 403 for https://api.github.com/repos/Egonex-AI/Understand-Anything/git/trees/main?recursive=1: {\"message\":\"API rate limit exceeded for 45.8.186.46. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)\",\"documentation_url\":\"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting\"}\n",
+    "GitHub API 403 for https://api.github.com/repos/Leonxlnx/taste-skill/git/trees/main?recursive=1: {\"message\":\"API rate limit exceeded for 45.8.186.46. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)\",\"documentation_url\":\"https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting\"}\n"
+  ]
+}

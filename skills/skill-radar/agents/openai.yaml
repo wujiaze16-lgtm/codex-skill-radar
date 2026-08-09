@@ -1,0 +1,4 @@
+interface:
+  display_name: "Skill Radar"
+  short_description: "Discover and safely install trending Codex skills"
+  default_prompt: "Use $skill-radar to find a trending Codex skill for my task."

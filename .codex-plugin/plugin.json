@@ -1,0 +1,29 @@
+{
+  "name": "codex-skill-radar",
+  "version": "0.1.0",
+  "description": "Discover, inspect, and safely install trending Codex skills from GitHub.",
+  "author": {
+    "name": "wujiaze16-lgtm",
+    "url": "https://github.com/wujiaze16-lgtm"
+  },
+  "homepage": "https://wujiaze16-lgtm.github.io/codex-skill-radar/",
+  "repository": "https://github.com/wujiaze16-lgtm/codex-skill-radar",
+  "license": "MIT",
+  "keywords": ["codex", "skills", "github", "discovery", "installer"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Codex Skill Radar",
+    "shortDescription": "Find and install trusted Codex skills from GitHub.",
+    "longDescription": "Search a daily GitHub catalog, compare skill capabilities and risk signals, then install a selected skill or plugin after an explicit review.",
+    "developerName": "wujiaze16-lgtm",
+    "category": "Productivity",
+    "capabilities": ["Search", "Read", "Write"],
+    "websiteURL": "https://wujiaze16-lgtm.github.io/codex-skill-radar/",
+    "defaultPrompt": [
+      "Find a trending Codex skill for my current task.",
+      "Compare popular Codex skills for browser automation.",
+      "Inspect and install this GitHub Codex skill safely."
+    ],
+    "brandColor": "#167D5A"
+  }
+}
