@@ -13,6 +13,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 from catalog_lib import (  # noqa: E402
     build_catalog_item,
+    categorize_skill,
     classify_capabilities,
     load_star_baselines,
     parse_frontmatter,
@@ -20,6 +21,18 @@ from catalog_lib import (  # noqa: E402
 
 
 class CatalogLibTests(unittest.TestCase):
+    def test_category_classifier_uses_description_evidence(self) -> None:
+        cases = [
+            ("api-design", "Design REST APIs and backend service contracts.", "engineering"),
+            ("investor-outreach", "Draft fundraising emails for startup investors.", "business-growth"),
+            ("video-studio", "Generate video, audio, and motion assets.", "design-media"),
+            ("threat-model", "Audit authentication threats and security vulnerabilities.", "security"),
+            ("custom-helper", "A specialized methodology for unusual tasks.", "general"),
+        ]
+        for name, description, expected in cases:
+            with self.subTest(name=name):
+                self.assertEqual(categorize_skill(name, description)["id"], expected)
+
     def test_parse_frontmatter_supports_folded_description(self) -> None:
         metadata = parse_frontmatter(
             """---

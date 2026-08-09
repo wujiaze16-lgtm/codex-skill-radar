@@ -16,6 +16,7 @@ from pathlib import Path
 from typing import Any
 
 from catalog_lib import (
+    CATEGORY_DEFINITIONS,
     SCHEMA_VERSION,
     build_catalog_item,
     isoformat_z,
@@ -177,6 +178,7 @@ def build_catalog(args: argparse.Namespace) -> dict[str, Any]:
             "provider": "GitHub",
             "queries": args.query or DEFAULT_QUERIES,
         },
+        "categories": CATEGORY_DEFINITIONS,
         "items": items,
         "warnings": errors[:20],
     }

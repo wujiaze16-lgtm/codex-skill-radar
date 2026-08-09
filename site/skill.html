@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="查看 Codex Skill 的用途、来源、热度、风险与安装方式。">
+    <title>Skill 详情 · Codex Skill Radar</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./index.html" aria-label="Codex Skill Radar 首页">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span><strong>Codex Skill Radar</strong><small>GitHub skill index</small></span>
+      </a>
+      <nav class="topnav" aria-label="主要导航">
+        <a href="./index.html">分类总览</a>
+        <a href="./catalog.html">完整目录</a>
+        <a href="https://github.com/wujiaze16-lgtm/codex-skill-radar" target="_blank" rel="noreferrer">GitHub</a>
+      </nav>
+    </header>
+
+    <main class="detail-main">
+      <div id="detailStatus" class="status-message detail-status" role="status">正在读取 Skill...</div>
+      <article id="skillDetail" hidden>
+        <nav id="breadcrumb" class="breadcrumb" aria-label="面包屑"></nav>
+        <div class="skill-detail-layout">
+          <div class="skill-content">
+            <header class="skill-identity">
+              <div class="skill-owner">
+                <img id="ownerAvatar" class="owner-avatar" alt="" width="54" height="54">
+                <div><p id="repositoryName" class="repo-kicker"></p><h1 id="skillName"></h1></div>
+              </div>
+              <div id="skillTags" class="tags"></div>
+            </header>
+            <p id="skillDescription" class="skill-description"></p>
+
+            <section aria-labelledby="classificationTitle">
+              <div class="detail-section-heading"><h2 id="classificationTitle">它能做什么</h2><span id="categoryConfidence"></span></div>
+              <a id="categoryLink" class="category-callout" href="#">
+                <span id="categoryMarker" class="category-marker" aria-hidden="true"></span>
+                <span><strong id="categoryLabel"></strong><small id="categoryDescription"></small></span>
+                <span class="arrow" aria-hidden="true">→</span>
+              </a>
+              <div id="categorySignals" class="signal-list"></div>
+            </section>
+
+            <section aria-labelledby="metricsTitle">
+              <div class="detail-section-heading"><h2 id="metricsTitle">热度与维护状态</h2></div>
+              <div id="detailMetrics" class="detail-grid"></div>
+            </section>
+
+            <section aria-labelledby="riskTitle">
+              <div class="detail-section-heading"><h2 id="riskTitle">安装前检查</h2><span id="riskBadge" class="risk"></span></div>
+              <p class="section-copy">风险等级来自仓库内脚本、Hooks 与 MCP 配置等静态信号，安装前仍应检查源码。</p>
+              <ul id="riskSignals" class="risk-signals"></ul>
+            </section>
+          </div>
+
+          <aside class="install-panel" aria-labelledby="installTitle">
+            <p class="eyebrow">INSTALL HANDOFF</p>
+            <h2 id="installTitle">交给 Codex 安装</h2>
+            <p>复制下面的提示词，在 Codex 中调用 Skill Radar 完成来源检查与安装。</p>
+            <pre id="installPrompt" class="prompt-box"></pre>
+            <button id="copyInstall" class="button primary full-button" type="button">复制安装提示词</button>
+            <a id="sourceLink" class="button secondary full-button" target="_blank" rel="noreferrer">在 GitHub 查看源码</a>
+            <dl class="source-facts">
+              <div><dt>安装方式</dt><dd id="installMode"></dd></div>
+              <div><dt>许可证</dt><dd id="licenseName"></dd></div>
+              <div><dt>Skill 路径</dt><dd id="skillPath"></dd></div>
+            </dl>
+          </aside>
+        </div>
+      </article>
+    </main>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="./skill-app.js" defer></script>
+  </body>
+</html>

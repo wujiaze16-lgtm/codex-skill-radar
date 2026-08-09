@@ -18,6 +18,135 @@ EXECUTABLE_SUFFIXES = {
     ".ts", ".tsx", ".rb", ".pl", ".lua", ".jar", ".exe",
 }
 
+CATEGORY_DEFINITIONS = [
+    {
+        "id": "engineering",
+        "label": "软件开发",
+        "description": "编码、架构、API、测试、调试与代码协作",
+        "tone": "green",
+    },
+    {
+        "id": "ai-agents",
+        "label": "AI 与智能体",
+        "description": "Agent 编排、LLM、Prompt、RAG 与模型评估",
+        "tone": "violet",
+    },
+    {
+        "id": "automation",
+        "label": "自动化与集成",
+        "description": "工作流、浏览器自动化、连接器与跨工具协同",
+        "tone": "cyan",
+    },
+    {
+        "id": "design-media",
+        "label": "设计与创意",
+        "description": "UI/UX、品牌、图像、视频、音频与视觉表达",
+        "tone": "magenta",
+    },
+    {
+        "id": "research",
+        "label": "研究与知识",
+        "description": "搜索、资料调研、文档检索与知识整理",
+        "tone": "blue",
+    },
+    {
+        "id": "data",
+        "label": "数据与分析",
+        "description": "表格、SQL、统计、可视化与数据处理",
+        "tone": "teal",
+    },
+    {
+        "id": "office-content",
+        "label": "办公与内容",
+        "description": "写作、文档、演示、邮件、翻译与会议材料",
+        "tone": "yellow",
+    },
+    {
+        "id": "business-growth",
+        "label": "产品与增长",
+        "description": "产品、市场、销售、SEO、融资与商业策略",
+        "tone": "orange",
+    },
+    {
+        "id": "devops-cloud",
+        "label": "DevOps 与云",
+        "description": "CI/CD、部署、容器、云平台与可观测性",
+        "tone": "slate",
+    },
+    {
+        "id": "security",
+        "label": "安全与合规",
+        "description": "安全审计、漏洞、隐私、鉴权与合规治理",
+        "tone": "red",
+    },
+    {
+        "id": "general",
+        "label": "通用工作流",
+        "description": "规划、协作、方法论与跨领域辅助能力",
+        "tone": "gray",
+    },
+]
+
+CATEGORY_KEYWORDS = {
+    "engineering": [
+        "software", "coding", "code", "api", "backend", "frontend", "react", "next.js",
+        "javascript", "typescript", "python", "golang", "rust", "java", "database", "architecture",
+        "debug", "testing", "test", "git", "pull request", "code review", "refactor", "sdk", "library",
+        "algorithm", "mobile app", "ios", "android", "web app", "developer", "package manager",
+    ],
+    "ai-agents": [
+        "agent", "agents", "multi-agent", "subagent", "llm", "large language model", "prompt",
+        "rag", "mcp", "model evaluation", "eval harness", "embedding", "openai", "claude", "gemini",
+        "context engineering", "tool calling", "agentic", "skill creation", "writing skills",
+    ],
+    "automation": [
+        "automation", "automate", "workflow", "integration", "browser automation", "web scraping",
+        "scraper", "connector", "webhook", "cron", "slack", "notion", "linear", "jira", "zapier",
+        "github issue", "github workflow", "cross-platform", "batch processing", "orchestration",
+    ],
+    "design-media": [
+        "design", "ui", "ux", "figma", "image", "video", "audio", "music", "animation", "brand",
+        "logo", "typography", "illustration", "visual", "creative", "photography", "3d", "canvas",
+        "motion", "media generation", "frontend slides", "design system", "art direction",
+    ],
+    "research": [
+        "research", "web search", "search engine", "literature", "investigate", "knowledge", "documentation",
+        "docs lookup", "source attribution", "fact check", "due diligence", "browse", "discovery", "citation",
+        "competitive analysis", "information retrieval", "technical docs", "documentation lookup",
+    ],
+    "data": [
+        "data analysis", "analytics", "spreadsheet", "excel", "sql", "dataframe", "visualization", "chart",
+        "statistics", "csv", "data pipeline", "data processing", "dashboard", "metrics", "forecasting",
+        "financial model", "business intelligence", "bigquery", "postgres", "schema migration",
+    ],
+    "office-content": [
+        "writing", "article", "blog", "content", "copywriting", "document", "pdf", "docx", "slides",
+        "presentation", "email", "meeting", "notes", "report", "newsletter", "translation", "translate",
+        "resume", "memo", "proposal", "proofread", "editing", "word document", "powerpoint",
+    ],
+    "business-growth": [
+        "marketing", "sales", "seo", "product management", "market research", "market", "competitor",
+        "investor", "fundraising", "customer", "growth", "campaign", "pricing", "startup", "business",
+        "go-to-market", "strategy", "commerce", "ecommerce", "revenue", "conversion", "social media",
+    ],
+    "devops-cloud": [
+        "devops", "deploy", "deployment", "ci/cd", "pipeline", "docker", "kubernetes", "cloud", "aws",
+        "azure", "gcp", "infrastructure", "terraform", "monitoring", "observability", "serverless", "vercel",
+        "github actions", "sre", "production operations", "container", "helm", "release engineering",
+    ],
+    "security": [
+        "security", "vulnerability", "threat", "compliance", "privacy", "authentication", "authorization",
+        "secret", "penetration", "malware", "security audit", "encryption", "safety", "secure coding",
+        "owasp", "incident response", "access control", "risk assessment", "forensics", "zero trust",
+    ],
+}
+
+CATEGORY_BY_ID = {category["id"]: category for category in CATEGORY_DEFINITIONS}
+GENERIC_SKILL_TOPICS = {
+    "agent", "agents", "agent-skills", "ai", "claude", "claude-code", "codex",
+    "cursor", "skills", "skill", "openai", "gemini", "antigravity",
+}
+
 
 def utc_now() -> datetime:
     return datetime.now(timezone.utc)
@@ -88,6 +217,51 @@ def normalize_description(value: str, fallback: str = "") -> str:
     if not description or "TODO" in description.upper():
         description = re.sub(r"\s+", " ", fallback).strip()
     return description[:360] or "No description provided."
+
+
+def _keyword_matches(text: str, keywords: Iterable[str]) -> list[str]:
+    normalized = f" {re.sub(r'[^a-z0-9+#./-]+', ' ', text.lower())} "
+    matches: list[str] = []
+    for keyword in keywords:
+        candidate = keyword.lower()
+        if f" {candidate} " in normalized or (" " in candidate and candidate in normalized):
+            matches.append(keyword)
+    return matches
+
+
+def categorize_skill(
+    name: str,
+    description: str,
+    topics: Iterable[str] = (),
+    skill_path: str = "",
+) -> dict[str, Any]:
+    """Assign one evidence-backed primary category from skill metadata."""
+    topic_text = " ".join(topic for topic in topics if topic.lower() not in GENERIC_SKILL_TOPICS)
+    scores: dict[str, int] = {}
+    signals: dict[str, list[str]] = {}
+    for category_id, keywords in CATEGORY_KEYWORDS.items():
+        name_matches = _keyword_matches(name.replace("-", " "), keywords)
+        description_matches = _keyword_matches(description, keywords)
+        topic_matches = _keyword_matches(topic_text.replace("-", " "), keywords)
+        path_matches = _keyword_matches(skill_path.replace("-", " "), keywords)
+        scores[category_id] = (
+            len(name_matches) * 5
+            + len(description_matches) * 2
+            + len(topic_matches) * 3
+            + len(path_matches)
+        )
+        signals[category_id] = list(dict.fromkeys(name_matches + topic_matches + description_matches + path_matches))
+
+    category_id, best_score = max(scores.items(), key=lambda entry: entry[1])
+    if best_score == 0:
+        category_id = "general"
+    definition = CATEGORY_BY_ID[category_id]
+    return {
+        "id": category_id,
+        "label": definition["label"],
+        "confidence": min(100, 35 + best_score * 8) if best_score else 25,
+        "signals": signals.get(category_id, [])[:4],
+    }
 
 
 def find_plugin_root(skill_path: str, paths: Iterable[str]) -> str | None:
@@ -240,10 +414,12 @@ def build_catalog_item(
     install_mode = "plugin" if plugin_root is not None else "skill"
     prompt_target = f"{full_name}:{skill_path}"
     item_id = hashlib.sha256(prompt_target.encode("utf-8")).hexdigest()[:16]
+    category = categorize_skill(name, description, repository_view["topics"], skill_path)
     return {
         "id": item_id,
         "name": name,
         "description": description,
+        "category": category,
         "types": types,
         "repository": repository_view,
         "skill_path": skill_path,

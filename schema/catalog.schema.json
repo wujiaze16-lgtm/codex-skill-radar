@@ -19,11 +19,15 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["id", "name", "description", "types", "repository", "skill_path", "install", "risk", "score"],
+        "required": ["id", "name", "description", "category", "types", "repository", "skill_path", "install", "risk", "score"],
         "properties": {
           "id": {"type": "string"},
           "name": {"type": "string"},
           "description": {"type": "string"},
+          "category": {
+            "type": "object",
+            "required": ["id", "label", "confidence", "signals"]
+          },
           "types": {"type": "array", "items": {"enum": ["skill", "plugin", "mcp"]}},
           "repository": {"type": "object"},
           "skill_path": {"type": "string"},
